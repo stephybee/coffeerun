@@ -28,7 +28,7 @@
 
   Checklist.prototype.removeRow = function(email){
     this.$element
-      .find('[value="]' + email + '"]')
+      .find('[value="' + email + '"]')
       .closest('[data-coffee-order="checkbox"]')
       .remove();
   };
@@ -40,7 +40,7 @@
       fn(email);
     }.bind(this));
   };
-  
+
   function Row(coffeeOrder){
     var $div = $('<div></div>', {
       'data-coffee-order': 'checkbox',
